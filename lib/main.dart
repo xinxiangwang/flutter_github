@@ -4,7 +4,9 @@ import 'package:provider/provider.dart';
 import 'package:untitled/common/GmLocalizations.dart';
 import 'package:untitled/common/global.dart';
 import 'package:untitled/routes/home_page.dart';
+import 'package:untitled/routes/language_route.dart';
 import 'package:untitled/routes/login_route.dart';
+import 'package:untitled/routes/theme_change_route.dart';
 
 void main() {
   Global.init().then((e) => runApp(const MyApp()));
@@ -55,7 +57,9 @@ class MyApp extends StatelessWidget {
             },
             home: HomeRoute(),
             routes: <String, WidgetBuilder>{
-              'login': (context) => LoginRoute()
+              'login': (context) => LoginRoute(),
+              'language': (context) => LanguageRoute(),
+              'theme': (context) => ThemeChangeRoute()
             },
           );
         },

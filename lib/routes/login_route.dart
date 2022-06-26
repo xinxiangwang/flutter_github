@@ -47,20 +47,20 @@ class _LoginRouteState extends State<LoginRoute> {
                 autofocus: _nameAutoFocus,
                 controller: _usernameController,
                 decoration: InputDecoration(
-                  labelText: '请输入账号2',
-                  hintText: '请输入账号1',
+                  labelText: gm.username,
+                  hintText: gm.username,
                   prefixIcon: Icon(Icons.person),
                 ),
                 validator: (v) {
-                  return v == null || v.trim().isNotEmpty ? null : '用户名必填';
+                  return v == null || v.trim().isNotEmpty ? null : gm.usernameValidate;
                 },
               ),
               TextFormField(
                 controller: _pwdController,
                 autofocus: !_nameAutoFocus,
                 decoration: InputDecoration(
-                  labelText: '请输入密码',
-                  hintText: '请输入密码1',
+                  labelText: gm.pswd,
+                  hintText: gm.pswd,
                   prefixIcon: Icon(Icons.lock),
                   suffixIcon: IconButton(
                     icon:
@@ -74,7 +74,7 @@ class _LoginRouteState extends State<LoginRoute> {
                 ),
                 obscureText: !pwdShow,
                 validator: (v) {
-                  return v == null || v.trim().isNotEmpty ? null : '用户名必填';
+                  return v == null || v.trim().isNotEmpty ? null : gm.pswdValidate;
                 },
               ),
               Padding(

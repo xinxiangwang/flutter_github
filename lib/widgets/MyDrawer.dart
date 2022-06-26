@@ -41,39 +41,43 @@ class MyDrawer extends StatelessWidget {
   _buildMenus() {
     return Consumer<UserModel>(
       builder: (context, userModel, child) {
-        var gm = GmLocalizations.of(context);
+        var gm = GmLocalizations.of(context)!;
         return ListView(
           children: [
             ListTile(
               leading: const Icon(Icons.color_lens),
-              title: Text('gm.theme'),
-              onTap: () {},
+              title: Text(gm.theme),
+              onTap: () {
+                Navigator.pushNamed(context, 'theme');
+              },
             ),
             ListTile(
               leading: const Icon(Icons.language),
-              title: Text('gm.language'),
-              onTap: () {},
+              title: Text(gm.language),
+              onTap: () {
+                Navigator.pushNamed(context, 'language');
+              },
             ),
             if (userModel.isLogin)
               ListTile(
                 leading: const Icon(Icons.power_settings_new),
-                title: Text('gm.logout'),
+                title: Text(gm.logout),
                 onTap: () {
                   showDialog(
                       context: context,
                       builder: (ctx) {
                         return AlertDialog(
-                          content: Text('gm.logoutTip'),
+                          content: Text(gm.logoutTip),
                           actions: [
                             TextButton(
                                 onPressed: () => Navigator.pop(context),
-                                child: const Text('gm.cancel')),
+                                child: Text(gm.cancel)),
                             TextButton(
                                 onPressed: () {
                                   userModel.user = null;
                                   Navigator.pop(context);
                                 },
-                                child: Text('gm.yes'))
+                                child: Text(gm.yes))
                           ],
                         );
                       });
