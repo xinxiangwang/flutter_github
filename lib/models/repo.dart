@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import "user.dart";
+import "owner.dart";
 part 'repo.g.dart';
 
 @JsonSerializable()
@@ -9,10 +9,10 @@ class Repo {
   late num id;
   late String name;
   late String full_name;
-  late User owner;
+  late Owner owner;
   Repo? parent;
   late bool private;
-  late String description;
+  String? description;
   late bool fork;
   String? language;
   late num forks_count;

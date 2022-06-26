@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:untitled/common/CacheObject.dart';
+import 'package:untitled/common/Git.dart';
 import 'package:untitled/models/index.dart';
 
 const _themes = <MaterialColor>[
@@ -36,6 +37,7 @@ class Global {
       ..enable = true
       ..maxAge = 3600
       ..maxCount = 100;
+    Git.init();
   }
 
   static saveProfile() =>

@@ -3,7 +3,8 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:untitled/common/GmLocalizations.dart';
 import 'package:untitled/common/global.dart';
-import 'package:untitled/routes/gome_page.dart';
+import 'package:untitled/routes/home_page.dart';
+import 'package:untitled/routes/login_route.dart';
 
 void main() {
   Global.init().then((e) => runApp(const MyApp()));
@@ -54,7 +55,7 @@ class MyApp extends StatelessWidget {
             },
             home: HomeRoute(),
             routes: <String, WidgetBuilder>{
-
+              'login': (context) => LoginRoute()
             },
           );
         },

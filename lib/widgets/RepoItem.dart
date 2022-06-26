@@ -67,7 +67,7 @@ class _RepoItemState extends State<RepoItem> {
                                     color: Colors.grey),
                               )
                             : Text(
-                                widget.repo.description,
+                                widget.repo.description ?? "",
                                 maxLines: 3,
                                 style: TextStyle(
                                     height: 1.15,

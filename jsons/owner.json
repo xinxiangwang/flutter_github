@@ -1,0 +1,20 @@
+{
+  "type": "User",
+  "following_url": "https://api.github.com/users/wearetvxq/following{/other_user}",
+  "organizations_url": "https://api.github.com/users/wearetvxq/orgs",
+  "gravatar_id": "",
+  "repos_url": "https://api.github.com/users/wearetvxq/repos",
+  "login": "wearetvxq",
+  "followers_url": "https://api.github.com/users/wearetvxq/followers",
+  "starred_url": "https://api.github.com/users/wearetvxq/starred{/owner}{/repo}",
+  "html_url": "https://github.com/wearetvxq",
+  "url": "https://api.github.com/users/wearetvxq",
+  "received_events_url": "https://api.github.com/users/wearetvxq/received_events",
+  "avatar_url": "https://avatars.githubusercontent.com/u/32411303?v=4",
+  "gists_url": "https://api.github.com/users/wearetvxq/gists{/gist_id}",
+  "id": 32411303,
+  "subscriptions_url": "https://api.github.com/users/wearetvxq/subscriptions",
+  "site_admin": false,
+  "node_id": "MDQ6VXNlcjMyNDExMzAz",
+  "events_url": "https://api.github.com/users/wearetvxq/events{/privacy}"
+}

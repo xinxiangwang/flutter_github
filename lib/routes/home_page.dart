@@ -4,6 +4,7 @@ import 'package:untitled/common/Git.dart';
 import 'package:untitled/common/GmLocalizations.dart';
 import 'package:untitled/common/global.dart';
 import 'package:untitled/models/index.dart';
+import 'package:untitled/widgets/MyDrawer.dart';
 import 'package:untitled/widgets/RepoItem.dart';
 
 class HomeRoute extends StatefulWidget {
@@ -25,6 +26,7 @@ class _HomeRouteState extends State<HomeRoute> {
         title: Text(GmLocalizations.of(context)!.home),
       ),
       body: _buildBody(),
+      drawer: MyDrawer(),
     );
   }
   Widget _buildBody() {

@@ -10,12 +10,12 @@ Repo _$RepoFromJson(Map<String, dynamic> json) => Repo()
   ..id = json['id'] as num
   ..name = json['name'] as String
   ..full_name = json['full_name'] as String
-  ..owner = User.fromJson(json['owner'] as Map<String, dynamic>)
+  ..owner = Owner.fromJson(json['owner'] as Map<String, dynamic>)
   ..parent = json['parent'] == null
       ? null
       : Repo.fromJson(json['parent'] as Map<String, dynamic>)
   ..private = json['private'] as bool
-  ..description = json['description'] as String
+  ..description = json['description'] as String?
   ..fork = json['fork'] as bool
   ..language = json['language'] as String?
   ..forks_count = json['forks_count'] as num
